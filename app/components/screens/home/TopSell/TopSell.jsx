@@ -202,8 +202,8 @@ const TopSell = () => {
                                             </button>
                                         </div>
                                         <Image
-                                            width={60}
-                                            height={60}
+                                            width={50}
+                                            height={50}
                                             src={item.category_image}
                                             alt='slayd'
                                             priority
