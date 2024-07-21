@@ -86,6 +86,7 @@ const Detail = () => {
                 { id: 3, image: item.image_3 },
                 { id: 4, image: item.image_4 },
             ].filter(image => image.image !== null),
+            description: item.description,
             title: item.name,
             uzs_price: item.uzs_price,
             usd_price: item.usd_price,
@@ -93,6 +94,8 @@ const Detail = () => {
     };
 
     const transformedData = transformData(data);
+    console.log(transformedData);
+    console.log("Description:", data.product?.description);
 
     return (
         <section className={styles.detail}>
@@ -165,34 +168,39 @@ const Detail = () => {
                                     <p className={styles.right__price}>{parseInt(transformedData.usd_price).toLocaleString('en-US').replace(/,/g, ' ')} $</p>
                                 )
                             }
-                            <ul className={styles.right__list}>
-                                {
-                                    (data.brand?.id) && (
-                                        <li className={styles.right__list__item}>
-                                            <span>
-                                                <p>Brendi</p>
-                                            </span>
-                                            <p>{data.brand?.name}</p>
-                                        </li>
-                                    )
-                                }
-                                {
-                                    (data.car_model?.id) && (
-                                        <li className={styles.right__list__item}>
-                                            <span>
-                                                <p>Avtomobil rusumi</p>
-                                            </span>
-                                            <p>{data.car_model?.name}</p>
-                                        </li>
-                                    )
-                                }
-                                <li className={styles.right__list__item}>
-                                    <span>
-                                        <p>Kategoriyasi</p>
-                                    </span>
-                                    <p>{data.category?.name}</p>
-                                </li>
-                            </ul>
+                        <ul className={styles.right__list}>
+                            {
+                                (data.brand?.id) && (
+                                    <li className={styles.right__list__item}>
+                                        <span>
+                                            <p>Brendi</p>
+                                        </span>
+                                        <p>{data.brand?.name}</p>
+                                    </li>
+                                )
+                            }
+                            {
+                                (data.car_model?.id) && (
+                                    <li className={styles.right__list__item}>
+                                        <span>
+                                            <p>Avtomobil rusumi</p>
+                                        </span>
+                                        <p>{data.car_model?.name}</p>
+                                    </li>
+                                )
+                            }
+                            <li className={styles.right__list__item}>
+                                <span>
+                                    <p>Kategoriyasi</p>
+                                </span>
+                                <p>{data.category?.name}</p>
+                            </li>
+        
+
+                        </ul>
+                        
+                        <b>Maxsulot haqida</b>
+                        <p>{transformedData.description }</p>
                             {
                                 (!cart.some(cartItem => cartItem.id === transformedData.id)) && (
                                     <div className={styles.right__items}>
