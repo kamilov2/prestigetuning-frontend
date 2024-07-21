@@ -99,7 +99,7 @@ const TopSell = () => {
                                             }
                                         })}
                                         className={styles.topSell__item__bottom__obj__item}>
-                                        <b className={styles.title}>{data.most_sold_product?.name} sotuvda !</b>
+                                        <b className={styles.title}>{data.most_sold_product?.name}</b>
                                         <Image
                                             width={300}
                                             height={300}
@@ -193,7 +193,7 @@ const TopSell = () => {
                                                     router.push({
                                                         pathname: '/catalog',
                                                         query: {
-                                                            сategory: item.id
+                                                            category_id: item.id
                                                         }
                                                     })}
                                                 type='button'>
@@ -202,8 +202,8 @@ const TopSell = () => {
                                             </button>
                                         </div>
                                         <Image
-                                            width={50}
-                                            height={50}
+                                            width={100}
+                                            height={100}
                                             src={item.category_image}
                                             alt='slayd'
                                             priority
