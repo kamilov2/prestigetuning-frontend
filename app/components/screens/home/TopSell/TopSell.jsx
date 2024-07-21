@@ -99,7 +99,7 @@ const TopSell = () => {
                                             }
                                         })}
                                         className={styles.topSell__item__bottom__obj__item}>
-                                        <b className={styles.title}>{data.most_sold_product?.name}</b>
+                                        <b className={styles.title}>{data.most_sold_product?.name} sotuvda !</b>
                                         <Image
                                             width={300}
                                             height={300}
