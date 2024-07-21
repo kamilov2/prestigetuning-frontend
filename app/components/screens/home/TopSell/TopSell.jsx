@@ -201,13 +201,7 @@ const TopSell = () => {
                                                 <i className="fa-solid fa-arrow-right-long"></i>
                                             </button>
                                         </div>
-                                        <Image
-                                            width={100}
-                                            height={100}
-                                            src={item.category_image}
-                                            alt='slayd'
-                                            priority
-                                        />
+                                   
                                     </div>
                                 </SwiperSlide>
                             ))
