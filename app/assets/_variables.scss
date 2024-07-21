@@ -1,0 +1,23 @@
+$black: #242323;
+$white: #fff;
+$radius: 1rem;
+$light-gray: #F4F5F6;
+$gray: #55556D;
+$border-color: #DEDEE2;
+$red: #EE0202;
+$orange: #F8944B;
+$green: #85E623;
+$bc: #FAFAFD;
+$shadow: 0px 5px 20px #2c293325;
+
+$transition: .3s all ease;
+
+
+
+@mixin content {
+    font-size: 2.2rem;
+
+    @media only screen and (max-width: 991px) {
+        font-size: 1.6rem;
+    }
+}
