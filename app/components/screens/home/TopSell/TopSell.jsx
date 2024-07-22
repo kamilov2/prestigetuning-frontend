@@ -187,7 +187,7 @@ const TopSell = () => {
                                 <SwiperSlide key={item.id}>
                                     <div className={styles.topSell__sale__item}>
                                         <div className={styles.title}>
-                                            <b>{item.name} yangi tovarlar !</b>
+                                            <b>{item.name} uchun yangi tovarlar !</b>
                                             <button
                                                 onClick={() =>
                                                     router.push({
