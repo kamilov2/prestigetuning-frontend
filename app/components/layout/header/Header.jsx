@@ -89,7 +89,7 @@ const Header = () => {
                 },
             });
             const data = await response.json();
-            console.log(data.results[0]);
+            
             if (!response.ok) {
                 throw new Error('Network response was not ok');
             } else {

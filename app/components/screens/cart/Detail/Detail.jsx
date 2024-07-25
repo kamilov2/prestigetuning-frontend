@@ -96,8 +96,6 @@ const Detail = () => {
     };
 
     const transformedData = transformData(data);
-    console.log(transformedData);
-    console.log("Description:", data.product?.description);
 
     return (
         <section className={styles.detail}>
@@ -204,7 +202,7 @@ const Detail = () => {
 
                                         </ul>
 
-                                        <b>Maxsulot haqida</b>
+                                        <b style={{ marginTop: '20px', fontSize: '1.2rem', fontWeight: '500' }}>Maxsulot haqida</b>
                                         <p>{transformedData.description}</p>
                                         {
                                             (!cart.some(cartItem => cartItem.id === transformedData.id)) && (
