@@ -1,5 +1,4 @@
 @import "../../../../assets/variables";
-$color: #C25506;
 
 .intro {
     max-width: 100%;
@@ -77,7 +76,7 @@ $color: #C25506;
             justify-content: space-between;
             padding: 10px 3rem;
             border-radius: 2rem;
-            background-color: $color; 
+            background-color: $black;
 
             &__left {
                 width: 55%;
