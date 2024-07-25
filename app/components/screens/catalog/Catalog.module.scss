@@ -297,6 +297,42 @@
     background-color: $black !important;
 }
 
+.loaderr {
+    @include loader;
+    border-radius: 5px;
+    height: 30px;
+}
+
+.none {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+
+    p {
+        color: $gray;
+        font-size: 1.1rem;
+        font-weight: 500;
+    }
+}
+
+.loader {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    gap: 20px;
+
+    &__ring {
+        @include loader;
+        height: 400px;
+        min-width: 250px;
+        flex: 1;
+    }
+}
+
 @media only screen and (max-width: 1199px) {
     .catalog {
         &__item {
