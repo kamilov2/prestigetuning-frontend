@@ -106,11 +106,10 @@ const TopSell = () => {
                                                 router.push({
                                                     pathname: '/catalog-detail',
                                                     query: {
-                                                        product_id: item.id
+                                                        product_id: data.most_sold_product?.id
                                                     }
                                                 })}
                                                 className={styles.topSell__item__bottom__obj__item}>
-                                                <b className={styles.title}>{data.most_sold_product?.name}</b>
                                                 <Image
                                                     width={300}
                                                     height={300}
@@ -118,6 +117,7 @@ const TopSell = () => {
                                                     alt='slayd'
                                                     priority
                                                 />
+                                                <b className={styles.title}>{data.most_sold_product?.name}</b>
                                                 <div></div>
                                                 <div></div>
                                             </div>
