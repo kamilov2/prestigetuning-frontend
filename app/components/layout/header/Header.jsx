@@ -185,51 +185,59 @@ const Header = () => {
                 <div className={styles.header__items__bottom}>
                     <MyContainer>
                         <div className={styles.header__items__bottom__items}>
-                            <button
-                                type='button'
-                                onClick={() => {
-                                    setCatalog(!catalog)
-                                    setham(false)
-                                }} className={`${styles.katalog} ${catalog ? styles.katalogAct : ""}`}>
-                                <Image
-                                    src={dots}
-                                    width={20}
-                                    height={20}
-                                    alt='dots'
-                                />
-                                <p>
-                                    Katalog
-                                </p>
-                            </button>
-                            <ul className={`${styles.catalog} ${catalog ? styles.catalogAct : ""}`}>
-                                {
-                                    data?.map((item) => (
-                                        <li key={item.id} className={styles.catalog__item}>
-                                            <button
-                                                type='button'
-                                                onClick={() => {
-                                                    setCatalog(false)
-                                                    router.push({
-                                                        pathname: '/catalog',
-                                                        query: {
-                                                            category_id: item.id
-                                                        }
-                                                    })
-                                                }} >
-                                                <Image
-                                                    src={item.category_image}
-                                                    width={20}
-                                                    height={20}
-                                                    alt='dots'
-                                                />
-                                                <p>
-                                                    {item.name}
-                                                </p>
-                                            </button>
-                                        </li>
-                                    ))
-                                }
-                            </ul>
+                            {
+                                router.pathname === '/catalog' ? null : (
+                                    <button
+                                        type='button'
+                                        onClick={() => {
+                                            setCatalog(!catalog)
+                                            setham(false)
+                                        }} className={`${styles.katalog} ${catalog ? styles.katalogAct : ""}`}>
+                                        <Image
+                                            src={dots}
+                                            width={20}
+                                            height={20}
+                                            alt='dots'
+                                        />
+                                        <p>
+                                            Katalog
+                                        </p>
+                                    </button>
+                                )
+                            }
+                            {
+                                router.pathname === '/catalog' ? null : (
+                                    <ul className={`${styles.catalog} ${catalog ? styles.catalogAct : ""}`}>
+                                        {
+                                            data?.map((item) => (
+                                                <li key={item.id} className={styles.catalog__item}>
+                                                    <button
+                                                        type='button'
+                                                        onClick={() => {
+                                                            setCatalog(false)
+                                                            router.push({
+                                                                pathname: '/catalog',
+                                                                query: {
+                                                                    category_id: item.id
+                                                                }
+                                                            })
+                                                        }} >
+                                                        <Image
+                                                            src={item.category_image}
+                                                            width={20}
+                                                            height={20}
+                                                            alt='dots'
+                                                        />
+                                                        <p>
+                                                            {item.name}
+                                                        </p>
+                                                    </button>
+                                                </li>
+                                            ))
+                                        }
+                                    </ul>
+                                )
+                            }
                             <ul className={`${styles.list} ${ham ? styles.navActive : ""}`}>
                                 {
                                     headerData?.map((item) => (
