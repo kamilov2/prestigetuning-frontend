@@ -254,15 +254,9 @@ const Catalog = () => {
                                     data?.length > 0 ? (
                                         loader ?
                                             <div className={styles.loader}>
-                                                <div className={styles.loader__ring}>
-                                                    <p></p>
-                                                </div>
-                                                <div className={styles.loader__ring}>
-                                                    <p></p>
-                                                </div>
-                                                <div className={styles.loader__ring}>
-                                                    <p></p>
-                                                </div>
+                                                <div className={styles.loader__ring}></div>
+                                                <div className={styles.loader__ring}></div>
+                                                <div className={styles.loader__ring}></div>
                                             </div>
                                             : (
                                                 data?.map((item) => (

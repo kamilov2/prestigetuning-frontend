@@ -14,7 +14,7 @@ import { useRouter } from 'next/router';
 const Recommend = () => {
     const router = useRouter();
     const { url, auth_token } = React.useContext(Context);
-
+    const [loader, setLoader] = React.useState(true)
     const [data, setData] = React.useState([])
 
     React.useEffect(() => {
@@ -38,6 +38,7 @@ const Recommend = () => {
 
                 if (data) {
                     setData(data);
+                    setLoader(false);
                 } else {
                     console.error('Ошибка: Некорректные данные получены от сервера.');
                 }
@@ -57,7 +58,7 @@ const Recommend = () => {
                     <div className={styles.products__item__header}>
                         <div className={styles.products__item__header__title}>
                             <p>
-                                Tavsiya qilamiz 
+                                Tavsiya qilamiz
                             </p>
                             <i className="fa-regular fa-star"></i>
                         </div>
@@ -92,39 +93,23 @@ const Recommend = () => {
                         }}
                     >
                         {
-                            data.recommended_products?.map((item) => (
-                                <SwiperSlide key={item.id}>
-                                    <div className={styles.products__item__cart}>
-                                        <div className={styles.products__item__cart__item}>
-                                            <div
-                                                className={styles.products__item__cart__item__img}
-                                            >
-                                                <Image
-                                                    width={300}
-                                                    height={300}
-                                                    src={item.image_1}
-                                                    alt='slayd'
-                                                    priority
-                                                />
-                                            </div>
-                                            <b
-                                                onClick={() =>
-                                                    router.push({
-                                                        pathname: '/catalog-detail',
-                                                        query: {
-                                                            product_id: item.id
-                                                        }
-                                                    })
-                                                }>{item.name}</b>
-                                            <div className={styles.price}>
-                                                {
-                                                    item.uzs_price.length <= 9 ? (
-                                                        <p>{parseInt(item.uzs_price).toLocaleString('en-US').replace(/,/g, ' ')} so'm</p>
-                                                    ) : (
-                                                        <p>{parseInt(item.usd_price).toLocaleString('en-US').replace(/,/g, ' ')} $</p>
-                                                    )
-                                                }
-                                                <button type='button'
+                            loader ? <p>Loading...</p> :
+                                data.recommended_products?.map((item) => (
+                                    <SwiperSlide key={item.id}>
+                                        <div className={styles.products__item__cart}>
+                                            <div className={styles.products__item__cart__item}>
+                                                <div
+                                                    className={styles.products__item__cart__item__img}
+                                                >
+                                                    <Image
+                                                        width={300}
+                                                        height={300}
+                                                        src={item.image_1}
+                                                        alt='slayd'
+                                                        priority
+                                                    />
+                                                </div>
+                                                <b
                                                     onClick={() =>
                                                         router.push({
                                                             pathname: '/catalog-detail',
@@ -132,16 +117,33 @@ const Recommend = () => {
                                                                 product_id: item.id
                                                             }
                                                         })
+                                                    }>{item.name}</b>
+                                                <div className={styles.price}>
+                                                    {
+                                                        item.uzs_price.length <= 9 ? (
+                                                            <p>{parseInt(item.uzs_price).toLocaleString('en-US').replace(/,/g, ' ')} so'm</p>
+                                                        ) : (
+                                                            <p>{parseInt(item.usd_price).toLocaleString('en-US').replace(/,/g, ' ')} $</p>
+                                                        )
                                                     }
-                                                >
-                                                    <strong>Savatga qo'shish</strong>
-                                                    <i className="fa-solid fa-cart-shopping"></i>
-                                                </button>
+                                                    <button type='button'
+                                                        onClick={() =>
+                                                            router.push({
+                                                                pathname: '/catalog-detail',
+                                                                query: {
+                                                                    product_id: item.id
+                                                                }
+                                                            })
+                                                        }
+                                                    >
+                                                        <strong>Savatga qo'shish</strong>
+                                                        <i className="fa-solid fa-cart-shopping"></i>
+                                                    </button>
+                                                </div>
                                             </div>
                                         </div>
-                                    </div>
-                                </SwiperSlide>
-                            ))
+                                    </SwiperSlide>
+                                ))
                         }
                     </Swiper>
                 </div>
@@ -184,39 +186,23 @@ const Recommend = () => {
                         }}
                     >
                         {
-                            data.new_products?.map((item) => (
-                                <SwiperSlide key={item.id}>
-                                    <div className={styles.products__item__cart}>
-                                        <div className={styles.products__item__cart__item}>
-                                            <div
-                                                className={styles.products__item__cart__item__img}
-                                            >
-                                                <Image
-                                                    width={300}
-                                                    height={300}
-                                                    src={item.image_1}
-                                                    alt='slayd'
-                                                    priority
-                                                />
-                                            </div>
-                                            <b
-                                                onClick={() =>
-                                                    router.push({
-                                                        pathname: '/catalog-detail',
-                                                        query: {
-                                                            product_id: item.id
-                                                        }
-                                                    })
-                                                }>{item.name}</b>
-                                            <div className={styles.price}>
-                                                {
-                                                    item.uzs_price.length <= 9 ? (
-                                                        <p>{parseInt(item.uzs_price).toLocaleString('en-US').replace(/,/g, ' ')} so'm</p>
-                                                    ) : (
-                                                        <p>{parseInt(item.usd_price).toLocaleString('en-US').replace(/,/g, ' ')} $</p>
-                                                    )
-                                                }
-                                                <button type='button'
+                            loader ? <p>Loading...</p> :
+                                data.new_products?.map((item) => (
+                                    <SwiperSlide key={item.id}>
+                                        <div className={styles.products__item__cart}>
+                                            <div className={styles.products__item__cart__item}>
+                                                <div
+                                                    className={styles.products__item__cart__item__img}
+                                                >
+                                                    <Image
+                                                        width={300}
+                                                        height={300}
+                                                        src={item.image_1}
+                                                        alt='slayd'
+                                                        priority
+                                                    />
+                                                </div>
+                                                <b
                                                     onClick={() =>
                                                         router.push({
                                                             pathname: '/catalog-detail',
@@ -224,15 +210,32 @@ const Recommend = () => {
                                                                 product_id: item.id
                                                             }
                                                         })
-                                                    }>
-                                                    <strong>Savatga qo'shish</strong>
-                                                    <i className="fa-solid fa-cart-shopping"></i>
-                                                </button>
+                                                    }>{item.name}</b>
+                                                <div className={styles.price}>
+                                                    {
+                                                        item.uzs_price.length <= 9 ? (
+                                                            <p>{parseInt(item.uzs_price).toLocaleString('en-US').replace(/,/g, ' ')} so'm</p>
+                                                        ) : (
+                                                            <p>{parseInt(item.usd_price).toLocaleString('en-US').replace(/,/g, ' ')} $</p>
+                                                        )
+                                                    }
+                                                    <button type='button'
+                                                        onClick={() =>
+                                                            router.push({
+                                                                pathname: '/catalog-detail',
+                                                                query: {
+                                                                    product_id: item.id
+                                                                }
+                                                            })
+                                                        }>
+                                                        <strong>Savatga qo'shish</strong>
+                                                        <i className="fa-solid fa-cart-shopping"></i>
+                                                    </button>
+                                                </div>
                                             </div>
                                         </div>
-                                    </div>
-                                </SwiperSlide>
-                            ))
+                                    </SwiperSlide>
+                                ))
                         }
                     </Swiper>
                 </div>

@@ -115,6 +115,30 @@
     }
 }
 
+.loader {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    gap: 20px;
+
+    &__ring {
+        @include loader;
+        height: 400px;
+        min-width: 250px;
+        flex: 1;
+    }
+
+    &__item {
+        @include loader;
+        height: 200px;
+        min-width: 250px;
+        flex: 1;
+    }
+}
+
 @media only screen and (max-width: 1199px) {
     .intro {
         .swiper-container {
