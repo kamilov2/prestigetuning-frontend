@@ -46,7 +46,6 @@
                     &__item {
                         width: 130px;
                         height: 130px;
-                        padding: 1rem;
                         border: 3px solid transparent;
                         transition: $transition;
                         cursor: pointer;
@@ -280,6 +279,7 @@
                         border-radius: 5px;
                         cursor: pointer;
                         transition: $transition;
+                        font-size: 1rem;
 
                         &:hover {
                             background-color: $red;
@@ -375,7 +375,7 @@
                 .left {
                     &__img {
                         img {
-                            width: 90%;
+                            width: 100%;
                             height: 250px;
                         }
                     }
@@ -386,7 +386,6 @@
                         &__item {
                             width: auto;
                             height: 100px;
-                            padding: .5rem;
                         }
                     }
                 }

@@ -128,13 +128,23 @@ const TopSell = () => {
                                             <SwiperSlide key={index}>
                                                 <div className={styles.topSell__item__bottom__cart}>
                                                     <div className={styles.topSell__item__bottom__cart__item}>
-                                                        <Image
-                                                            width={300}
-                                                            height={300}
-                                                            src={item.image_1}
-                                                            alt='slayd'
-                                                            priority
-                                                        />
+                                                        <div
+                                                            onClick={() =>
+                                                                router.push({
+                                                                    pathname: '/catalog-detail',
+                                                                    query: {
+                                                                        product_id: item.id
+                                                                    }
+                                                                })}
+                                                        >
+                                                            <Image
+                                                                width={300}
+                                                                height={300}
+                                                                src={item.image_1}
+                                                                alt='slayd'
+                                                                priority
+                                                            />
+                                                        </div>
                                                         <b onClick={() =>
                                                             router.push({
                                                                 pathname: '/catalog-detail',

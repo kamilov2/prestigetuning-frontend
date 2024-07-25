@@ -267,6 +267,14 @@ const Detail = () => {
                                                 <div className={styles.detail__item__cart}>
                                                     <div className={styles.detail__item__cart__item}>
                                                         <div
+                                                            onClick={() =>
+                                                                router.push({
+                                                                    pathname: '/catalog-detail',
+                                                                    query: {
+                                                                        product_id: item.id
+                                                                    }
+                                                                })
+                                                            }
                                                             className={styles.detail__item__cart__item__img}
                                                         >
                                                             <Image

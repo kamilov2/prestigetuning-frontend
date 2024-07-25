@@ -99,6 +99,14 @@ const Recommend = () => {
                                         <div className={styles.products__item__cart}>
                                             <div className={styles.products__item__cart__item}>
                                                 <div
+                                                    onClick={() =>
+                                                        router.push({
+                                                            pathname: '/catalog-detail',
+                                                            query: {
+                                                                product_id: item.id
+                                                            }
+                                                        })
+                                                    }
                                                     className={styles.products__item__cart__item__img}
                                                 >
                                                     <Image
@@ -117,7 +125,8 @@ const Recommend = () => {
                                                                 product_id: item.id
                                                             }
                                                         })
-                                                    }>{item.name}</b>
+                                                    }
+                                                >{item.name}</b>
                                                 <div className={styles.price}>
                                                     {
                                                         item.uzs_price.length <= 9 ? (
@@ -126,7 +135,9 @@ const Recommend = () => {
                                                             <p>{parseInt(item.usd_price).toLocaleString('en-US').replace(/,/g, ' ')} $</p>
                                                         )
                                                     }
-                                                    <button type='button'
+                                                    <button
+                                                        style={{ fontSize: '1rem' }}
+                                                        type='button'
                                                         onClick={() =>
                                                             router.push({
                                                                 pathname: '/catalog-detail',
@@ -192,6 +203,14 @@ const Recommend = () => {
                                         <div className={styles.products__item__cart}>
                                             <div className={styles.products__item__cart__item}>
                                                 <div
+                                                    onClick={() =>
+                                                        router.push({
+                                                            pathname: '/catalog-detail',
+                                                            query: {
+                                                                product_id: item.id
+                                                            }
+                                                        })
+                                                    }
                                                     className={styles.products__item__cart__item__img}
                                                 >
                                                     <Image
@@ -210,7 +229,8 @@ const Recommend = () => {
                                                                 product_id: item.id
                                                             }
                                                         })
-                                                    }>{item.name}</b>
+                                                    }
+                                                >{item.name}</b>
                                                 <div className={styles.price}>
                                                     {
                                                         item.uzs_price.length <= 9 ? (
@@ -219,7 +239,9 @@ const Recommend = () => {
                                                             <p>{parseInt(item.usd_price).toLocaleString('en-US').replace(/,/g, ' ')} $</p>
                                                         )
                                                     }
-                                                    <button type='button'
+                                                    <button
+                                                        style={{ fontSize: '1rem' }}
+                                                        type='button'
                                                         onClick={() =>
                                                             router.push({
                                                                 pathname: '/catalog-detail',

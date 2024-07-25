@@ -264,7 +264,17 @@ const Catalog = () => {
                                                 data?.map((item) => (
                                                     <div key={item.id} className={styles.catalog__item__content__list__cart}>
                                                         <div className={styles.catalog__item__content__list__cart__item}>
-                                                            <div className={styles.catalog__item__content__list__cart__item__img}>
+                                                            <div
+                                                                onClick={() =>
+                                                                    router.push({
+                                                                        pathname: '/catalog-detail',
+                                                                        query: {
+                                                                            product_id: item.id
+                                                                        }
+                                                                    })
+                                                                }
+                                                                className={styles.catalog__item__content__list__cart__item__img}
+                                                            >
                                                                 <Image
                                                                     width={300}
                                                                     height={300}
@@ -289,14 +299,18 @@ const Catalog = () => {
                                                                         <p>{parseInt(item.usd_price).toLocaleString('en-US').replace(/,/g, ' ')} $</p>
                                                                     )
                                                                 }
-                                                                <button type='button' onClick={() =>
-                                                                    router.push({
-                                                                        pathname: '/catalog-detail',
-                                                                        query: {
-                                                                            product_id: item.id
-                                                                        }
-                                                                    })
-                                                                }>
+                                                                <button
+                                                                    style={{ fontSize: '1rem' }}
+                                                                    type='button'
+                                                                    onClick={() =>
+                                                                        router.push({
+                                                                            pathname: '/catalog-detail',
+                                                                            query: {
+                                                                                product_id: item.id
+                                                                            }
+                                                                        })
+                                                                    }
+                                                                >
                                                                     <i className="fa-solid fa-cart-shopping"></i>
                                                                 </button>
                                                             </div>
