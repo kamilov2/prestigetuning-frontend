@@ -57,7 +57,7 @@ const Recommend = () => {
                     <div className={styles.products__item__header}>
                         <div className={styles.products__item__header__title}>
                             <p>
-                                Tavsiya qilamiz
+                                Tavsiya qilamiz 
                             </p>
                             <i className="fa-regular fa-star"></i>
                         </div>

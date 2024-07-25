@@ -84,7 +84,7 @@ const TopSell = () => {
                                     slidesPerView: 2,
                                 },
                                 1024: {
-                                    slidesPerView: (data.top_selling_products?.length === 3 ? 4 : data.top_selling_products?.length + 1),
+                                    slidesPerView: 4,
                                 },
                             }}
                         >
