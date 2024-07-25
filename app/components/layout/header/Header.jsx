@@ -89,7 +89,7 @@ const Header = () => {
                 },
             });
             const data = await response.json();
-            
+
             if (!response.ok) {
                 throw new Error('Network response was not ok');
             } else {
@@ -281,10 +281,12 @@ const Header = () => {
                             </button>
 
                             <div className={styles.search}>
-                                <form className={styles.form}>
+                                <form onSubmit={handleSubmit} className={styles.form}>
                                     <input
                                         type="text"
-                                        placeholder='Tovar nomini kiriting'
+                                        placeholder="Tovar nomini kiriting"
+                                        value={formData.name}
+                                        onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                                     />
                                     <button className={styles.btn} type='submit'>
                                         <strong>qidirish</strong>
