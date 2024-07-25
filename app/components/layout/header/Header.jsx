@@ -186,7 +186,7 @@ const Header = () => {
                     <MyContainer>
                         <div className={styles.header__items__bottom__items}>
                             {
-                                router.pathname === '/catalog' ? null : (
+                                router.pathname === '/catalog' ? <div></div> : (
                                     <button
                                         type='button'
                                         onClick={() => {
@@ -206,7 +206,7 @@ const Header = () => {
                                 )
                             }
                             {
-                                router.pathname === '/catalog' ? null : (
+                                router.pathname === '/catalog' ? <div></div> : (
                                     <ul className={`${styles.catalog} ${catalog ? styles.catalogAct : ""}`}>
                                         {
                                             data?.map((item) => (
