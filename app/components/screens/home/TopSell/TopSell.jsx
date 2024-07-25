@@ -88,6 +88,9 @@ const TopSell = () => {
                                         nextEl: `.${styles.btn__prev}`,
                                     }}
                                     breakpoints={{
+                                        200: {
+                                            slidesPerView: 1,
+                                        },
                                         320: {
                                             slidesPerView: 1,
                                         },
