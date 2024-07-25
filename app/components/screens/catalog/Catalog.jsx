@@ -128,6 +128,7 @@ const Catalog = () => {
     const applyFilters = () => {
         setDe(!de)
         setCurrentPage(1);
+        setFilter(false)
     };
 
     const clearFilters = () => {
@@ -138,6 +139,7 @@ const Catalog = () => {
         setUsd_price_min("");
         setUsd_price_max("");
         setCurrentPage(1);
+        setFilter(false)
     };
 
     return (
