@@ -218,13 +218,13 @@ const Catalog = () => {
                                 </span>
                                 <div className={`${price ? styles.dn : styles.inps}`}>
                                     <input
-                                        type="text"
+                                        type="number"
                                         placeholder='10$ dan'
                                         value={usd_price_min}
                                         onChange={(e) => setUsd_price_min(e.target.value)}
                                     />
                                     <input
-                                        type="text"
+                                        type="number"
                                         placeholder='1200$ gacha'
                                         value={usd_price_max}
                                         onChange={(e) => setUsd_price_max(e.target.value)}
