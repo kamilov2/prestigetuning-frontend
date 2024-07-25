@@ -241,6 +241,14 @@ const Detail = () => {
                                             Ushbu turkumdagi mahsulotlar
                                         </p>
                                     </div>
+                                    <div className={styles.detail__item__header__btns}>
+                                        <div className={styles.btn__next}>
+                                            <i className="fa-solid fa-angle-left"></i>
+                                        </div>
+                                        <div className={styles.btn__prev}>
+                                            <i className="fa-solid fa-angle-right"></i>
+                                        </div>
+                                    </div>
                                 </div>
                                 <Swiper
                                     modules={[Navigation, Scrollbar, A11y]}
