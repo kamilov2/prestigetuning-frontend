@@ -144,7 +144,7 @@ const Catalog = () => {
 
     return (
         <>
-            <AllIntro text="katalog" />
+            <AllIntro text="Katalog" />
             <section className={styles.catalog}>
                 <MyContainer>
                     <div className={styles.catalog__item}>
