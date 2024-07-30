@@ -8,22 +8,22 @@ const Footer = () => {
     const [link] = React.useState([
         {
             id: 1,
-            link: '/',
+            link: 'https://t.me/prestigetuning_uz',
             icon: 'fa-brands fa-telegram',
         },
         {
             id: 2,
-            link: '/',
+            link: 'https://www.instagram.com/prestigetuning.uz/',
             icon: 'fa-brands fa-instagram',
         },
         {
             id: 3,
-            link: '/',
+            link: 'https://www.youtube.com/@prestigetuning_x',
             icon: 'fa-brands fa-youtube',
         },
         {
             id: 4,
-            link: '/',
+            link: 'https://www.tiktok.com/@prestigetuning.uz',
             icon: 'fa-brands fa-tiktok',
         },
     ])
