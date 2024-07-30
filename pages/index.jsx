@@ -17,6 +17,8 @@ const Index = () => {
                 <meta name="description" content="Prestige Tuning - Andijondagi sifatli va tezkor avtomobil tuning markazi. Bizning kompaniya avtomobillar tuningi va ta'miri sohasida 10 yillik tajribaga ega va har yil 10,000 dan ortiq mijozga xizmat ko'rsatadi. Bizning mutaxassislar sizning avtomobilingizni sifatli va tez ravishda tuning qilishdi." />
                 <meta name="keywords" content="tuning, avtomobil tuning, Andijon, sifatli xizmat, tezkor xizmat, avtomobil sozlash, unumdorlikni oshirish, transport vositasini o'zgartirish, dvigatel tuning, tashqi ko'rinishni sozlash, ichki ko'rinishni sozlash, professional tuning, avtomobil yangilanishi, Andijon avtomobil xizmatlari, avtomobil ta'miri, ekspert tuning, maxsus avtomobil ishlari, avtomobil unumdorligi, yuqori sifatli tuning, tezkor xizmat, tajribali mutaxassislar" />
                 <meta name="image_src" content={logo} />
+                <meta name="yandex-verification" content="e3f1e49fe24457e0" />
+                <meta name="google-site-verification" content="bMjtA1p_n-Ql6Nz2FfrbmYpsCYE_ol6y4KhVgX-5tew" />
 
                 <meta property="og:title" content="Prestige Tuning" />
                 <meta property="og:description" content="Prestige Tuning - Andijondagi sifatli va tezkor avtomobil tuning markazi. Bizning kompaniya avtomobillar tuningi va ta'miri sohasida 10 yillik tajribaga ega va har yil 10,000 dan ortiq mijozga xizmat ko'rsatadi. Bizning mutaxassislar sizning avtomobilingizni sifatli va tez ravishda tuning qilishdi." />
@@ -27,7 +29,7 @@ const Index = () => {
                 <meta property="og:locale" content="ru_RU" />
 
                 <link rel="canonical" href="https://prestigetuning.uz/" />
-                
+
                 <title>Prestige Tuning</title>
             </Head>
 
