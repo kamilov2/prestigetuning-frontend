@@ -155,14 +155,6 @@ const Catalog = () => {
                             </span>
                         </div>
                         <div className={`${styles.catalog__item__left} ${filter ? styles.df : ''}`}>
-                            <div className={styles.catalog__item__left__select}>
-                                <Select
-                                    options={productOptions}
-                                    placeholder="Qidiruv"
-                                    value={selectedProduct}
-                                    onChange={handleProductChange}
-                                />
-                            </div>
                             <ul className={styles.catalog__item__left__list}>
                                 <span onClick={() => setKategory(!kategory)} className={styles.span}>
                                     <p>Kategoriya</p>
